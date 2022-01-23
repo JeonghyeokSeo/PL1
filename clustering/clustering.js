@@ -46,3 +46,11 @@ const locations = [
   { lat: -42.735258, lng: 147.438 },
   { lat: -43.999792, lng: 170.463352 },
 ];
+// create an array of all your markers
+const markers = [locations]; 
+
+// Path for cluster icons to be appended (1.png, 2.png, etc.)
+const imagePath = "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m";
+
+// Enable marker clustering for this map and these markers
+const markerClusterer = new MarkerClusterer(map, markers, {imagePath: imagePath});
