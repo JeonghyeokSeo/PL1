@@ -3990,7 +3990,7 @@ https://maps.googleapis.com/maps/api/directions/json
                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eCrothers Trl\u003c/b\u003e",
                      "maneuver" : "turn-right",
                      "polyline" : {
-                        "points" : "{{_cGtszuNZ`@LNDDFBNFPHXLRHZFPDJFBL@L@LJn@DVDXLNJJPPLPLTFPN^FNHRBDDHXd@b@n@XXJLf@`@l@`@FFFNNXBHBBHHJFBDtA|D@@hAxCTp@HRDNBF?B?DADEDKHCBKJAFAH?HBHBNFV"
+                        "points" : "{% raw %}{{_cGtszuNZ`@LNDDFBNFPHXLRHZFPDJFBL@L@LJn@DVDXLNJJPPLPLTFPN^FNHRBDDHXd@b@n@XXJLf@`@l@`@FFFNNXBHBBHHJFBDtA|D@@hAxCTp@HRDNBF?B?DADEDKHCBKJAFAH?HBHBNFV{% endraw %}"
                      },
                      "start_location" : {
                         "lat" : 42.60301760000001,
