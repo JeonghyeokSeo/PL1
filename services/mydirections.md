@@ -22,6 +22,7 @@ https://maps.googleapis.com/maps/api/directions/json
 ## Next paste the full JSON response to this query here:
 
 ```JSON
+{% raw %}
 {
    "geocoded_waypoints" : [
       {
@@ -3990,7 +3991,7 @@ https://maps.googleapis.com/maps/api/directions/json
                      "html_instructions" : "Turn \u003cb\u003eright\u003c/b\u003e onto \u003cb\u003eCrothers Trl\u003c/b\u003e",
                      "maneuver" : "turn-right",
                      "polyline" : {
-                        "points" : "{% raw %}{{_cGtszuNZ`@LNDDFBNFPHXLRHZFPDJFBL@L@LJn@DVDXLNJJPPLPLTFPN^FNHRBDDHXd@b@n@XXJLf@`@l@`@FFFNNXBHBBHHJFBDtA|D@@hAxCTp@HRDNBF?B?DADEDKHCBKJAFAH?HBHBNFV{% endraw %}"
+                        "points" : "{{_cGtszuNZ`@LNDDFBNFPHXLRHZFPDJFBL@L@LJn@DVDXLNJJPPLPLTFPN^FNHRBDDHXd@b@n@XXJLf@`@l@`@FFFNNXBHBBHHJFBDtA|D@@hAxCTp@HRDNBF?B?DADEDKHCBKJAFAH?HBHBNFV"
                      },
                      "start_location" : {
                         "lat" : 42.60301760000001,
@@ -15778,6 +15779,7 @@ https://maps.googleapis.com/maps/api/directions/json
    ],
    "status" : "OK"
 }
+{% endraw %}
 ```
 ____
 ## Rubric
