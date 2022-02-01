@@ -8,6 +8,6 @@ function initMap() {
     new google.maps.Marker({
       position: myLatLng,
       map,
-      title: "Hello World!",
+      title: "First",
     });
   }
