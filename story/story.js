@@ -5,8 +5,8 @@ function initMap() {
     });
   
     new google.maps.Marker({
-      position: "London",
+      position: { lat : 49.35384670547889, lng : -123.10022193015402},
       map,
-      title: "First",
+      title: "Vancouver",
     });
   }
