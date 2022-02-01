@@ -17,8 +17,6 @@ function initMap() {
       marker = new google.maps.Marker({
         position: { lat: city[1], lng: city[2] },
         map,
-        icon: image,
-        shape: shape,
         title: city[0],
         animation: google.maps.Animation.DROP,
       });
