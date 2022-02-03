@@ -7,7 +7,7 @@ function initMap() {
       center: { lat : 41.892, lng : -46.012 },
     });
     //Icon image file from https://toppng.com/show_download/87692/transparent-background-aeroplane-icon/large
-    const lineSymbol = "./plane.png"
+    const lineSymbol = "./plane.png";
     //Points for the markers and the route poly line
     const cities = [
       ["Vancouver", 49.35384670547889, -123.10022193015402],
