@@ -6,7 +6,7 @@ function initMap() {
       zoom: 4,
       center: { lat : 41.892, lng : -46.012 },
     });
-    //Icon image file from https://toppng.com/show_download/87692/transparent-background-aeroplane-icon/large
+    //Symbol icon
     const lineSymbol = {
       path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
       scale: 7,
