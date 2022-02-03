@@ -47,7 +47,7 @@ function initMap() {
       const route = new google.maps.Polyline({
       path: cities,
       geodesic: true,
-      strokeColor: "#00008B",
+      strokeColor: "#FF0000",
       strokeOpacity: 1.5,
       strokeWeight: 3,
       });
