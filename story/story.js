@@ -76,9 +76,10 @@ function initMap() {
       icons: [
         {
           icon: lineSymbol,
-          offset: "100%",
+          offset: "50%",
         },
       ],
+      map: map,
     });
     
     route.setMap(map)
