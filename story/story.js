@@ -9,7 +9,7 @@ function initMap() {
     
     const lineSymbol = {
       path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-      scale: 9,
+      scale: 7,
       strokeColor: "#00008B",
     };
 
@@ -108,5 +108,5 @@ function animatedSymbol(route) {
 
     icons[0].offset = count / 2 + "%";
     route.set("icons", icons);
-  }, 20);
+  }, 40);
 };
