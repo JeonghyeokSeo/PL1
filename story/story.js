@@ -7,6 +7,8 @@ function initMap() {
       center: { lat : 41.892, lng : -46.012 },
     });
     
+    const image =
+      "https://i.dlpng.com/static/png/6509890_preview.png"
 
     //Points for the markers and the route poly line
     const cities = [
@@ -44,6 +46,7 @@ function initMap() {
 
     ];
     
+
     for (let i = 0; i < cities.length; i++) {
       const city = cities[i];
   
@@ -60,18 +63,24 @@ function initMap() {
 
     };  
 
-    //Draw polyline
-    route = new google.maps.Polyline({
+    //Draw polyline anf add animatied simbol
+    const route = new google.maps.Polyline({
       path: points,
       geodesic: true,
-      strokeColor: "#FF0000",
+      strokeColor: "#2F4F4F",
       strokeOpacity: 1.5,
       strokeWeight: 3,
+      icons: [
+        {
+          icon: image,
+          offset: "100%",
+        },
+      ],
     });
-
+    
     route.setMap(map)
     marker.addListener("click", toggleDrop);
-
+    animatedSimbol(line);
   };
   
 
@@ -81,6 +90,18 @@ function toggleDrop() {
     marker.setAnimation(null);
   } else {
     marker.setAnimation(google.maps.Animation.DROP)
-  }
-  
+  } 
 }
+
+function animatedSimbol(line) {
+  let count = 0;
+
+  window.setInterval(() => {
+    count = (count + 1 ) % 200;
+
+    const icons = line.get("icons");
+
+    icons[0].offset = count / 2 + "%";
+    line.set("icons", icons);
+  }, 20);
+};
