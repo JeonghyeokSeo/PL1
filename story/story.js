@@ -7,8 +7,11 @@ function initMap() {
       center: { lat : 41.892, lng : -46.012 },
     });
     
-    const image =
-      "https://i.dlpng.com/static/png/6509890_preview.png"
+    const lineSymbol = {
+      path: google.maps.SymbolPath.FOWARD_CLOSED_ARROW,
+      scale: 9,
+      strokeColor: "#00008B",
+    };
 
     //Points for the markers and the route poly line
     const cities = [
@@ -72,7 +75,7 @@ function initMap() {
       strokeWeight: 3,
       icons: [
         {
-          icon: image,
+          icon: lineSymbol,
           offset: "100%",
         },
       ],
