@@ -80,7 +80,7 @@ function initMap() {
     
     route.setMap(map)
     marker.addListener("click", toggleDrop);
-    animatedSimbol(route);
+    animatedSymbol(route);
   };
   
 
@@ -93,7 +93,7 @@ function toggleDrop() {
   } 
 }
 
-function animatedSimbol(route) {
+function animatedSymbol(route) {
   let count = 0;
 
   window.setInterval(() => {
