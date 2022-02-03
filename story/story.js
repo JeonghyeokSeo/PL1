@@ -6,9 +6,8 @@ function initMap() {
       zoom: 4,
       center: { lat : 41.892, lng : -46.012 },
     });
-    
-    const lineSymbol = "https://www.freeiconspng.com/thumbs/airplane-icon-png/airplane-icon---item-2--vector-magz--free-download-vector-graphics-4.png";
-
+    //Icon image file from https://toppng.com/show_download/87692/transparent-background-aeroplane-icon/large
+    const lineSymbol = "./plane.png"
     //Points for the markers and the route poly line
     const cities = [
       ["Vancouver", 49.35384670547889, -123.10022193015402],
