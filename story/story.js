@@ -7,7 +7,12 @@ function initMap() {
       center: { lat : 41.892, lng : -46.012 },
     });
     //Icon image file from https://toppng.com/show_download/87692/transparent-background-aeroplane-icon/large
-    const lineSymbol = "./plane.png";
+    const lineSymbol = {
+      path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+      scale: 7,
+      strokeColor: "#191970",
+    };
+      
     //Points for the markers and the route poly line
     const cities = [
       ["Vancouver", 49.35384670547889, -123.10022193015402],
