@@ -80,7 +80,7 @@ function initMap() {
     
     route.setMap(map)
     marker.addListener("click", toggleDrop);
-    animatedSimbol(line);
+    animatedSimbol(route);
   };
   
 
@@ -93,15 +93,15 @@ function toggleDrop() {
   } 
 }
 
-function animatedSimbol(line) {
+function animatedSimbol(route) {
   let count = 0;
 
   window.setInterval(() => {
     count = (count + 1 ) % 200;
 
-    const icons = line.get("icons");
+    const icons = route.get("icons");
 
     icons[0].offset = count / 2 + "%";
-    line.set("icons", icons);
+    route.set("icons", icons);
   }, 20);
 };
