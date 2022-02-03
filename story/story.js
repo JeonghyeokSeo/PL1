@@ -98,15 +98,16 @@ function toggleDrop() {
 }
 
 //function for arrow moving animation
+//
 function animatedSymbol(route) {
   let count = 0;
 
   window.setInterval(() => {
-    count = (count + 1 ) % 200;
+    count = (count + 1 ) % 100;
 
     const icons = route.get("icons");
 
     icons[0].offset = count / 2 + "%";
     route.set("icons", icons);
-  }, 40);
+  }, 100);
 };
