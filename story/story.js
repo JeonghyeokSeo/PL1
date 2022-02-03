@@ -42,19 +42,17 @@ function initMap() {
       ["Istanbul", 41.010732210336506, 28.97344570582138]
 
     ];
-
-    {
-      const route = new google.maps.Polyline({
-      path: cities,
-      geodesic: true,
-      strokeColor: "#FF0000",
-      strokeOpacity: 1.5,
-      strokeWeight: 3,
+    
+    //Draw polyline
+        const route = new google.maps.Polyline({
+        path: cities,
+        geodesic: true,
+        strokeColor: "#FF0000",
+        strokeOpacity: 1.5,
+        strokeWeight: 3,
       });
-
-    route.setMap(map)
-    }
-
+    
+    //Draw markers and the animations
     for (let i = 0; i < cities.length; i++) {
       const city = cities[i];
   
@@ -65,16 +63,15 @@ function initMap() {
         animation: google.maps.Animation.DROP,
       });
 
-      marker.addListener("click", toggleBounce);
-    };
+      marker.addListener("click", toggleDrop);
+    };  
 
-    
+    route.setMap(map)
 
-    
   };
 
 
-function toggleBounce() {
+function toggleDrop() {
   if (marker.getAnimation()  !== null) {
     marker.setAnimation(null);
   } else {
