@@ -103,7 +103,7 @@ function animatedSymbol(route) {
   let count = 0;
 
   window.setInterval(() => {
-    count = (count + 1 ) % 100;
+    count = (count + 1 ) % 200;
 
     const icons = route.get("icons");
 
