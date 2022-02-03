@@ -51,10 +51,7 @@ function initMap() {
         map,
         title: city[0],
         animation: google.maps.Animation.DROP,
-      });
-
-      marker.addListener("click", toggleDrop);
-    };  
+      }); 
 
      //Draw polyline
       route = new google.maps.Polyline({
@@ -64,7 +61,9 @@ function initMap() {
         strokeOpacity: 1.5,
         strokeWeight: 3,
       });
+    };  
         route.setMap(map)
+        marker.addListener("click", toggleDrop);
 
   };
 
