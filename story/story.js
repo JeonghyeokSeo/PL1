@@ -43,16 +43,6 @@ function initMap() {
 
     ];
     
-    //Draw polyline
-        const route = new google.maps.Polyline({
-        path: cities,
-        geodesic: true,
-        strokeColor: "#FF0000",
-        strokeOpacity: 1.5,
-        strokeWeight: 3,
-      });
-    
-    //Draw markers and the animations
     for (let i = 0; i < cities.length; i++) {
       const city = cities[i];
   
@@ -66,7 +56,15 @@ function initMap() {
       marker.addListener("click", toggleDrop);
     };  
 
-    route.setMap(map)
+     //Draw polyline
+      route = new google.maps.Polyline({
+        path: { lat: city[1], lng: city[2] },
+        geodesic: true,
+        strokeColor: "#FF0000",
+        strokeOpacity: 1.5,
+        strokeWeight: 3,
+      });
+        route.setMap(map)
 
   };
 
