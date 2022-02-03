@@ -8,7 +8,7 @@ function initMap() {
     });
     
     const lineSymbol = {
-      path: google.maps.SymbolPath.FOWARD_CLOSED_ARROW,
+      path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
       scale: 9,
       strokeColor: "#00008B",
     };
@@ -66,7 +66,7 @@ function initMap() {
 
     };  
 
-    //Draw polyline anf add animatied simbol
+    //Draw polyline anf add animatied symbol
     const route = new google.maps.Polyline({
       path: points,
       geodesic: true,
@@ -84,11 +84,11 @@ function initMap() {
     
     route.setMap(map)
     marker.addListener("click", toggleDrop);
- 
+    animatedSymbol(route);
   };
   
 
-
+//Function for pin drop animation
 function toggleDrop() {
   if (marker.getAnimation()  !== null) {
     marker.setAnimation(null);
@@ -96,3 +96,17 @@ function toggleDrop() {
     marker.setAnimation(google.maps.Animation.DROP)
   } 
 }
+
+//function for arrow moving animation
+function animatedSymbol(route) {
+  let count = 0;
+
+  window.setInterval(() => {
+    count = (count + 1 ) % 200;
+
+    const icons = route.get("icons");
+
+    icons[0].offset = count / 2 + "%";
+    route.set("icons", icons);
+  }, 20);
+};
