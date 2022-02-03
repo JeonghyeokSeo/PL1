@@ -6,6 +6,8 @@ function initMap() {
       center: { lat : 41.892, lng : -46.012 },
     });
     
+
+    //Points for the markers and the route poly line
     const cities = [
       ["Vancouver", 49.35384670547889, -123.10022193015402],
       ["Seatle" , 47.60599405111063, -122.34088114604468],
@@ -41,6 +43,18 @@ function initMap() {
 
     ];
 
+    {
+      const route = new google.maps.Polyline({
+      path: cities,
+      geodesic: true,
+      strokeColor: "#00008B",
+      strokeOpacity: 1.5,
+      strokeWeight: 3,
+      });
+
+    route.setMap(map)
+    }
+
     for (let i = 0; i < cities.length; i++) {
       const city = cities[i];
   
@@ -54,15 +68,9 @@ function initMap() {
       marker.addListener("click", toggleBounce);
     };
 
-    const route = new google.maps.Polyline({
-      path: cities,
-      geodesic: true,
-      strokeColor: "#00008B",
-      strokeOpacity: 1.5,
-      strokeWeight: 3,
-    });
+    
 
-    route.setMap(map)
+    
   };
 
 
