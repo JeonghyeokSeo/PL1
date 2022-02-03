@@ -62,7 +62,7 @@ function initMap() {
 
     //Draw polyline
     route = new google.maps.Polyline({
-      path: { lat: city[1], lng: city[2] },
+      path: points,
       geodesic: true,
       strokeColor: "#FF0000",
       strokeOpacity: 1.5,
