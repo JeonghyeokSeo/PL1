@@ -1,4 +1,5 @@
 let marker;
+let points = [];
 
 function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -53,19 +54,26 @@ function initMap() {
         animation: google.maps.Animation.DROP,
       }); 
 
-     //Draw polyline
-      route = new google.maps.Polyline({
-        path: { lat: city[1], lng: city[2] },
-        geodesic: true,
-        strokeColor: "#FF0000",
-        strokeOpacity: 1.5,
-        strokeWeight: 3,
-      });
+      //Add point to list
+      points.push({lat: city[1], lng: city[2]})
+
+
     };  
-        route.setMap(map)
-        marker.addListener("click", toggleDrop);
+
+    //Draw polyline
+    route = new google.maps.Polyline({
+      path: { lat: city[1], lng: city[2] },
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.5,
+      strokeWeight: 3,
+    });
+
+    route.setMap(map)
+    marker.addListener("click", toggleDrop);
 
   };
+  
 
 
 function toggleDrop() {
