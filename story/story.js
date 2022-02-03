@@ -84,7 +84,7 @@ function initMap() {
     
     route.setMap(map)
     marker.addListener("click", toggleDrop);
-    animatedSymbol(route);
+ 
   };
   
 
@@ -96,16 +96,3 @@ function toggleDrop() {
     marker.setAnimation(google.maps.Animation.DROP)
   } 
 }
-
-function animatedSymbol(route) {
-  let count = 0;
-
-  window.setInterval(() => {
-    count = (count + 1 ) % 200;
-
-    const icons = route.get("icons");
-
-    icons[0].offset = count / 2 + "%";
-    route.set("icons", icons);
-  }, 20);
-};
