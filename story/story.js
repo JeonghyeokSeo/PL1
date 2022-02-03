@@ -7,11 +7,7 @@ function initMap() {
       center: { lat : 41.892, lng : -46.012 },
     });
     
-    const lineSymbol = {
-      path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
-      scale: 7,
-      strokeColor: "#00008B",
-    };
+    const lineSymbol = "https://www.freeiconspng.com/thumbs/airplane-icon-png/airplane-icon---item-2--vector-magz--free-download-vector-graphics-4.png";
 
     //Points for the markers and the route poly line
     const cities = [
