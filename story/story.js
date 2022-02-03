@@ -6,7 +6,7 @@ function initMap() {
       center: { lat : 41.892, lng : -46.012 },
     });
     
-    cities = [
+    const cities = [
       ["Vancouver", 49.35384670547889, -123.10022193015402],
       ["Seatle" , 47.60599405111063, -122.34088114604468],
       ["Chicago", 41.87354091314642, -87.62897238907448],
@@ -39,7 +39,7 @@ function initMap() {
       ["Santorini", 36.39309208364547, 25.456291988396277],
       ["Istanbul", 41.010732210336506, 28.97344570582138]
 
-    ]
+    ];
 
     for (let i = 0; i < cities.length; i++) {
       const city = cities[i];
@@ -52,8 +52,18 @@ function initMap() {
       });
 
       marker.addListener("click", toggleBounce);
-    }
-  }
+    };
+
+    const route = new google.maps.Polyline({
+      path: cities,
+      geodesic: true,
+      strokeColor: "#00008B",
+      strokeOpacity: 1.5,
+      strokeWeight: 3,
+    });
+
+    route.setMap(map)
+  };
 
 
 function toggleBounce() {
