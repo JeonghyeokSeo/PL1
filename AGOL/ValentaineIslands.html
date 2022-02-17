@@ -35,7 +35,7 @@
   const view = new MapView({
     map: map,
     center: [15.38415,43.97877], //Longitude, latitude
-    zoom: 13,
+    zoom: 15,
     container: "viewDiv"
  });
 
@@ -55,14 +55,6 @@
         width: 1
     }
  };
- const popupTemplate = {
-    title: "{Name}",
-    content: "{Description}"
- }
- const attributes = {
-    Name: "Galesnjak",
-    Description: "Heart-shaped island in Croatia"
- }
 
  const pointGraphic = new Graphic({
     geometry: point,
