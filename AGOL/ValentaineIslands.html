@@ -42,26 +42,61 @@
  const graphicsLayer = new GraphicsLayer();
  map.add(graphicsLayer);
 
- const point = { //Create a point
-    type: "point",
-    longitude: 15.38415,
-    latitude: 43.97877
+ const polygon = {
+    type: "polygon",
+    rings: [
+        [15.38302, 43.97918], //Longitude, latitude
+        [15.38362, 43.97990], //Longitude, latitude
+        [15.38415, 43.98023], //Longitude, latitude
+        [15.38478, 43.98048], //Longitude, latitude
+        [15.38558, 43.98050], //Longitude, latitude
+        [15.38617, 43.98037], //Longitude, latitude
+        [15.38656, 43.97983], //Longitude, latitude
+        [15.38636, 43.97891], //Longitude, latitude
+        [15.38582, 43.97776], //Longitude, latitude
+        [15.38494, 43.97728], //Longitude, latitude
+        [15.38412, 43.97684], //Longitude, latitude
+        [15.38354, 43.97659], //Longitude, latitude
+        [15.38304, 43.97667], //Longitude, latitude
+        [15.38278, 43.97704], //Longitude, latitude
+        [15.38231, 43.97757], //Longitude, latitude
+        [15.38164, 43.97771], //Longitude, latitude
+        [15.38077, 43.97781], //Longitude, latitude
+        [15.38003, 43.97882], //Longitude, latitude
+        [15.38033, 43.97942], //Longitude, latitude
+        [15.38106, 43.97969], //Longitude, latitude
+        [15.38211, 43.97953], //Longitude, latitude
+        [15.38270, 43.97928]  //Longitude, latitude
+    ]
  };
- const simpleMarkerSymbol = {
-    type: "simple-marker",
-    color: [255, 192, 203],  // Pink
+
+ const simpleFillSymbol = {
+    type: "simple-fill",
+    color: [255, 105, 180, 0.7],  // Pink, opacity 80%
     outline: {
-        color: [255, 255, 255], // White
+        color: [255, 255, 255],
         width: 1
     }
  };
 
- const pointGraphic = new Graphic({
-    geometry: point,
-    symbol: simpleMarkerSymbol
- });
- graphicsLayer.add(pointGraphic);
+ const popupTemplate = {
+    title: "{Name}",
+    content: "{Description}"
+ }
+ const attributes = {
+    Name: "Galešnjak Island",
+    Description: "A heart-shaped island in Croatia"
+ }
 
+ const polygonGraphic = new Graphic({
+    geometry: polygon,
+    symbol: simpleFillSymbol,
+
+    attributes: attributes,
+    popupTemplate: popupTemplate
+
+ });
+ graphicsLayer.add(polygonGraphic);
 
  });
 </script>
